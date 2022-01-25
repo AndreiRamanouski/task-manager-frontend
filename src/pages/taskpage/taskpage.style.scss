@@ -1,0 +1,19 @@
+.taskpage{
+    height: 85vh;
+    display: flex;
+    margin: 2vh 5vw;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Times New Roman', Times, serif;
+    color: teal;
+
+    .buttons{
+        display: flex;
+        justify-content: space-between;
+        
+
+        .buton{
+            margin: 2vh 5vw;
+        }
+    }
+}

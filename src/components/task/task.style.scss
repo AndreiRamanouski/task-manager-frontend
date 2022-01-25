@@ -1,0 +1,29 @@
+.task {
+  margin-bottom: 0.5vh;
+  border: 1px solid green;
+  height: 9vh;
+  
+ 
+
+  .description {
+    margin: 0.5vh 0.3vw;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+    .title {
+        height: 5vh;
+        width: 20vw;
+       
+    }
+    .finished {
+      color: rgba(153, 205, 50, 0.7);
+      text-align: center;
+      
+    }
+    .not-finished {
+      color: rgba(255, 99, 71, 0.7);
+      text-align: center;
+    }
+  }
+}
