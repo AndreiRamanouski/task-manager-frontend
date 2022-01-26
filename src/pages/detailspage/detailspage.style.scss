@@ -1,0 +1,25 @@
+.detailspage{
+    height: 85vh;
+    display: flex;
+    margin: 2vh 5vw;                                                                
+    display: flex;
+    justify-content: space-around;
+    font-family: 'Times New Roman', Times, serif;
+    color: teal;
+    .buttons{
+      display: flex;
+      justify-content: space-between;
+      background-color: darkgreen;
+      
+  }
+
+    .finished {
+        color: rgba(153, 205, 50, 0.7);   
+      }
+      .not-finished {
+        color: rgba(255, 99, 71, 0.7);
+      }
+
+      
+   
+}

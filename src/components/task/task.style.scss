@@ -6,24 +6,25 @@
  
 
   .description {
-    margin: 0.5vh 0.3vw;
+    margin: 2vh 2vw;
     display: flex;
     justify-content: space-between;
     text-align: center;
+    text-orientation: upright;
 
     .title {
         height: 5vh;
         width: 20vw;
-       
     }
     .finished {
       color: rgba(153, 205, 50, 0.7);
-      text-align: center;
-      
+      height: 5vh;
+      width: 5vw;     
     }
     .not-finished {
       color: rgba(255, 99, 71, 0.7);
-      text-align: center;
+      height: 5vh;
+      width: 5vw;
     }
   }
 }

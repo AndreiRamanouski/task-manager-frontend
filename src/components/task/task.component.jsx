@@ -1,8 +1,7 @@
 import React from "react";
 import moment from "moment";
 import "./task.style.scss";
-
-import Button from '../button/button.component'
+import { Link } from "react-router-dom";
 
 const Task = ({ taskId, title, targetDate, isFinished }) => {
   return (
@@ -16,7 +15,7 @@ const Task = ({ taskId, title, targetDate, isFinished }) => {
       <div className={`${isFinished ? "finished" : "not-finished"}`}>
       {isFinished ? <>&#10004;</> : <>&#10006;</>}
       </div>
-      <Button buttonText='Show info' color='green'/>
+      <Link to={`/tasks/${taskId}`}>View details</Link>
       </div>
     </div>
   );

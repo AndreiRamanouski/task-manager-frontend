@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../../components/button/button.component";
 import Task from "../../components/task/task.component";
 import MOCK_TASKS from "../../mockdata/mock.tasks";
@@ -9,6 +10,7 @@ import "./taskpage.style.scss";
 const Taskpage = () => {
   const tasks = MOCK_TASKS;
   const [tasksToShow, setTasks] = useState([]);
+  const navigate = useNavigate()
 
   const viewYourTasks = () => {
     const idToFind = ["qwedcvbg4ty5sqkrtughfnstyu01"];
@@ -42,14 +44,10 @@ const Taskpage = () => {
           className="button"
           buttonText="Add task"
           color="DarkTurquoise"
+          actionOnClick={() => navigate('/tasks/create')}
         />
       </div>
       <div>
-        {tasksToShow.length > 0 ? (
-          <h4>The number of tasks is {tasksToShow.length}</h4>
-        ) : (
-          <h4>There are no tasks</h4>
-        )}
         {tasksToShow.length > 0 &&
           tasksToShow.map((task) => <Task key={task.id} {...task} />)}
       </div>
