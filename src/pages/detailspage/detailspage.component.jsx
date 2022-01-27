@@ -29,7 +29,7 @@ const DetailsPage = () => {
       setLoading(false);
     };
     fetchTask();
-  }, tasks);
+  }, [tasks]);
 
   return (
     <div className="detailspage">
