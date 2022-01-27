@@ -1,0 +1,52 @@
+$sub-color: rgb(22, 209, 209);
+$main-color: grey;
+
+.create-task{
+max-width: 40vw;
+margin: 5vh 5vw;
+
+.title{
+    margin: 2vh 0;
+}
+
+
+.group{
+position: relative;
+border: none;
+width: 35vw;
+
+
+.form-input {
+    background-color: white;
+    color : black;
+    font-size: 18px;
+    padding: 1vh 1vw 1vh 1vw;
+    display: block;
+    width:  100%;
+    border: none;
+    border-bottom: 1px solid $sub-color;
+    margin: 1vh 0;
+
+    &:focus {
+        outline:none;
+    }
+
+}
+.select{
+    width: 10vw;
+}
+
+.form-input-label{
+    color: $sub-color;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    left: 1vw;
+    top: -0.5vh;
+    transition: 500ms ease all;
+}
+}
+Button{
+    margin-left: 12vw;
+}
+}
