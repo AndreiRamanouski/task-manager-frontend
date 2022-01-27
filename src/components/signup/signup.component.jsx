@@ -35,39 +35,38 @@ class SignUp extends React.Component {
       countryName,
       streetName,
     } = event;
-    console.log(event)
 
     let userAndOrganization = {
       userName: userName,
       lastName: lastName,
-      email: { email },
-      password: { password },
+      email: email ,
+      password: password,
       organization: {
-        organizationName: { organizationName },
-        phoneNumber: { phoneNumber },
-        defaultPassword: { defaultPassword },
+        organizationName:  organizationName ,
+        phoneNumber:  phoneNumber ,
+        defaultPassword:  defaultPassword ,
         address: {
-          countryName: { countryName },
-          streetName: { streetName },
+          countryName:  countryName ,
+          streetName:  streetName ,
         },
       },
     };
     console.log(userAndOrganization)
 
-    // UserDataService.createUserAndOrganization(userAndOrganization)
-    // .then(
-    //   console.log("Congratulations on your very first rest call to yur own application")
-    // )
+    UserDataService.createUserAndOrganization(userAndOrganization)
+    .then( response =>
+      console.log(response)
+    ).catch(error => console.log(error))
 
-    const res = await fetch('http://localhost:8080/organizations', {
-      method:"POST",
-      headers:{
-        'Content-type' : 'application/json'
-      },
-      body: JSON.stringify(userAndOrganization)
-    })
-    const data = await res.json()
-    console.log(data)
+    // const res = await fetch('http://localhost:8080/organizations', {
+    //   method:"POST",
+    //   headers:{
+    //     'Content-type' : 'application/json'
+    //   },
+    //   body: JSON.stringify(userAndOrganization)
+    // })
+    // const data = await res.json()
+    // console.log(data)
 
     this.setState({
       userName: "",
