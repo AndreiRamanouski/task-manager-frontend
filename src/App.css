@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:regular,bold,italic&subset=latin,latin-ext');
+
 .App {
   text-align: center;
-  background-color: whitesmoke;
+  background-color: azure;
+  font-family: "Sans Pro";
 }
 
 
