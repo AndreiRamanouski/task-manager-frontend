@@ -54,30 +54,14 @@ class SignUp extends React.Component {
     console.log(userAndOrganization)
 
     UserDataService.createUserAndOrganization(userAndOrganization)
-    .then( response =>
+    .then( response =>{
       console.log(response)
+      if(response.status === 200){
+        console.log(response.status)
+        this.props.setIsNewUser(false)
+      }
+    }
     ).catch(error => console.log(error))
-
-    // const res = await fetch('http://localhost:8080/organizations', {
-    //   method:"POST",
-    //   headers:{
-    //     'Content-type' : 'application/json'
-    //   },
-    //   body: JSON.stringify(userAndOrganization)
-    // })
-    // const data = await res.json()
-    // console.log(data)
-
-    this.setState({
-      userName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      organizationName: "",
-      defaultPassword: "",
-      countryName: "",
-      streetName: "",
-    });
   };
 
   handleChange = (event) => {
@@ -88,6 +72,13 @@ class SignUp extends React.Component {
     let errors = {};
     if (values.password !== values.confirmPassword) {
       errors.password = "Passwords should match";
+      values.password =''
+      values.confirmPassword=''
+    }
+    if (values.password<6) {
+      errors.password = "Password should be longer than 6 letters";
+      values.password =''
+      values.confirmPassword=''
     }
     return errors;
   };

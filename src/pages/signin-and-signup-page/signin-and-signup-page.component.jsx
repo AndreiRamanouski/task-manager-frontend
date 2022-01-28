@@ -4,6 +4,7 @@ import SignIn from "../../components/signin/signin.component";
 import SignUp from "../../components/signup/signup.component";
 import "./signin-and-signup-page.style.scss";
 
+
 const SigninAndSignupPage = () => {
   const [isNewUser, setIsNewUser] = useState(false);
   return (
@@ -17,7 +18,7 @@ const SigninAndSignupPage = () => {
         actionOnClick={() => setIsNewUser(!isNewUser)}
       />
      
-      {isNewUser && <SignUp />}
+      {isNewUser && <SignUp setIsNewUser={setIsNewUser} />}
     </div>
   );
 };
