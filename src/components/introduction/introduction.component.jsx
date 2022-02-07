@@ -9,9 +9,9 @@ const Introduction = ({imagesrc, text, actionUri,match}) => {
     backgroundImage:`url(${imagesrc})`
   }}/>
   
-  <h5 className="text">
+  <h3 className="text">
     {text.toUpperCase()}      
-    </h5>
+    </h3>
   </div>;
 };
 

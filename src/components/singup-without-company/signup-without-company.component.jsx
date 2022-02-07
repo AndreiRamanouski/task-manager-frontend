@@ -67,7 +67,7 @@ class SignUpWithoutCompany extends React.Component {
                   name="userName"
                   required
                 />
-                <label className="form-input-label">Your username: </label>
+                <label className="form-input-label">Username: </label>
               </fieldset>
               <fieldset className="group">
                 <Field
@@ -76,7 +76,7 @@ class SignUpWithoutCompany extends React.Component {
                   name="lastName"
                   required
                 />
-                <label className="form-input-label">Your last name: </label>
+                <label className="form-input-label">Last name: </label>
               </fieldset>
               <fieldset className="group">
                 <Field
@@ -85,7 +85,7 @@ class SignUpWithoutCompany extends React.Component {
                   name="email"
                   required
                 />
-                <label className="form-input-label">Your email: </label>
+                <label className="form-input-label">Email: </label>
               </fieldset>
 
               <Button buttonText="Create Account" color="green" type="submit" />

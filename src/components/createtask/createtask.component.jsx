@@ -21,7 +21,10 @@ const CreateTask = () => {
     );
   
     const selectMultipleFields = () => {
-      return <Select options={allUsersInTheOrganization} onChange={(user) => setUserToAsign(user)} />
+      return <Select options={allUsersInTheOrganization}
+       onChange={(user) => setUserToAsign(user)}
+       placeholder='Assign users'
+       />
     }
   
     useEffect(() => {
@@ -89,7 +92,7 @@ const CreateTask = () => {
                 <Field className="form-input" type="date" name="date" />
               </fieldset>
               <Field
-              className=""
+              className="form-input"
               name="usersToAssign"
               options={allUsersInTheOrganization}
               component={selectMultipleFields}

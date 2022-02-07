@@ -9,7 +9,7 @@ class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      successfulRegistration:false,
+      successfulRegistration: false,
       userName: "",
       lastName: "",
       email: "",
@@ -39,29 +39,29 @@ class SignUp extends React.Component {
     let userAndOrganization = {
       userName: userName,
       lastName: lastName,
-      email: email ,
+      email: email,
       password: password,
       organization: {
-        organizationName:  organizationName ,
-        phoneNumber:  phoneNumber ,
-        defaultPassword:  defaultPassword ,
+        organizationName: organizationName,
+        phoneNumber: phoneNumber,
+        defaultPassword: defaultPassword,
         address: {
-          countryName:  countryName ,
-          streetName:  streetName ,
+          countryName: countryName,
+          streetName: streetName,
         },
       },
     };
-    console.log(userAndOrganization)
+    console.log(userAndOrganization);
 
     UserDataService.createUserAndOrganization(userAndOrganization)
-    .then( response =>{
-      console.log(response)
-      if(response.status === 200){
-        console.log(response.status)
-        this.props.setIsNewUser(false)
-      }
-    }
-    ).catch(error => console.log(error))
+      .then((response) => {
+        console.log(response);
+        if (response.status === 200) {
+          console.log(response.status);
+          this.props.setIsNewUser(false);
+        }
+      })
+      .catch((error) => console.log(error));
   };
 
   handleChange = (event) => {
@@ -72,13 +72,13 @@ class SignUp extends React.Component {
     let errors = {};
     if (values.password !== values.confirmPassword) {
       errors.password = "Passwords should match";
-      values.password =''
-      values.confirmPassword=''
+      values.password = "";
+      values.confirmPassword = "";
     }
-    if (values.password<6) {
+    if (values.password < 6) {
       errors.password = "Password should be longer than 6 letters";
-      values.password =''
-      values.confirmPassword=''
+      values.password = "";
+      values.confirmPassword = "";
     }
     return errors;
   };
@@ -231,7 +231,7 @@ class SignUp extends React.Component {
                 </label>
               </fieldset>
 
-              <Button buttonText="Create Account" color="green" type="submit"/>
+              <Button buttonText="Create Account" color="green" type="submit" />
             </Form>
           </Formik>
         </div>
