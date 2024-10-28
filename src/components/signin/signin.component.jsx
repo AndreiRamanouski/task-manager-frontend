@@ -1,53 +1,55 @@
-import React from "react";
-import "./signin.style.scss";
-import Button from "../button/button.component";
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import UserDataService from "../../api/user/UserDataService";
+import React from 'react';
+import './signin.style.scss';
+import Button from '../button/button.component';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import UserDataService from '../../api/user/UserDataService';
 
 class SignIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
-      password: "",
+      email: '',
+      password: '',
     };
   }
 
   handleSubmit = async (event) => {
-    let { email, password } = event
+    let { email, password } = event;
     let userLoginRequestModel = {
-      "email" : email,
-      "password" : password
-     }
+      email: email,
+      password: password,
+    };
 
-     await UserDataService.signIn(userLoginRequestModel)
-     .then( function(response) { 
-       console.log(response);
-       if(response.status === 200)
-       {
-        UserDataService.registerSuccessfulLogin(email, response.data);
-        UserDataService.getUserInfo().then((response) =>
-          UserDataService.registerUserIDAndOrganizationID(response.data.userID, response.data.organizationID)
-        ).catch((error) => console.log(error))
-       }
-     
-    
-    })
-     .catch((error) => console.log(error))
-    this.props.navigate('/tasks')
+    await UserDataService.signIn(userLoginRequestModel)
+      .then(function (response) {
+        console.log(response);
+        if (response.status === 200) {
+          UserDataService.registerSuccessfulLogin(email, response.data);
+          UserDataService.getUserInfo()
+            .then((response) =>
+              UserDataService.registerUserIDAndOrganizationID(
+                response.data.userID,
+                response.data.organizationID,
+              ),
+            )
+            .catch((error) => console.log(error));
+        }
+      })
+      .catch((error) => console.log(error));
+    this.props.navigate('/tasks');
   };
 
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
-    console.log(event.password)
+    console.log(event.password);
   };
 
   validate = (values) => {
     let errors = {};
     if (values.password < 6) {
-      errors.password = "Password should be longer than 6 letters";
-      values.password = "";
+      errors.password = 'Password should be longer than 6 letters';
+      values.password = '';
     }
     return errors;
   };
@@ -82,7 +84,7 @@ class SignIn extends React.Component {
             </fieldset>
 
             <ErrorMessage
-              style={{ color: "red" }}
+              style={{ color: 'red' }}
               name="password"
               component="div"
               className="title"
@@ -96,8 +98,7 @@ class SignIn extends React.Component {
               />
               <label className="form-input-label">Enter your password: </label>
             </fieldset>
-            <Button buttonText="Sign in" color="green" type="submit"
-            />
+            <Button buttonText="Sign in" color="green" type="submit" />
           </Form>
         </Formik>
       </div>

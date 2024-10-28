@@ -1,7 +1,7 @@
-import React from "react";
-import "./header.style.scss";
-import { ReactComponent as Logo } from "../../assets/task.svg";
-import { Link } from "react-router-dom";
+import React from 'react';
+import './header.style.scss';
+import { ReactComponent as Logo } from '../../assets/task.svg';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const currentUser = false;
@@ -20,7 +20,7 @@ const Header = () => {
           Tasks
         </Link>
         {currentUser ? (
-          <div className="option" onClick={() => console.log("logout")}>
+          <div className="option" onClick={() => console.log('logout')}>
             SIGN OUT
           </div>
         ) : (

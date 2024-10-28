@@ -1,24 +1,24 @@
-import React from "react";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import Button from "../../components/button/button.component";
-import Task from "../../components/task/task.component";
-import MOCK_TASKS from "../../mockdata/mock.tasks";
+import React from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import Button from '../../components/button/button.component';
+import Task from '../../components/task/task.component';
+import MOCK_TASKS from '../../mockdata/mock.tasks';
 
-import "./taskpage.style.scss";
+import './taskpage.style.scss';
 
 const Taskpage = () => {
   const tasks = MOCK_TASKS;
   const [tasksToShow, setTasks] = useState([]);
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const viewYourTasks = () => {
-    const idToFind = ["qwedcvbg4ty5sqkrtughfnstyu01"];
+    const idToFind = ['qwedcvbg4ty5sqkrtughfnstyu01'];
     const taske = tasks.filter(
       (task) =>
         (task.users = task.users.filter((user) =>
-          idToFind.includes(user.userId)
-        ))
+          idToFind.includes(user.userId),
+        )),
     );
     setTasks(taske.filter((task) => task.users.length > 0));
   };

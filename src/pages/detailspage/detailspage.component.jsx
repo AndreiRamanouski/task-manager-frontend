@@ -1,12 +1,12 @@
-import React from "react";
-import "./detailspage.style.scss";
+import React from 'react';
+import './detailspage.style.scss';
 
-import TaskDetails from "../../components/taskdetails/taskdetails.component";
+import TaskDetails from '../../components/taskdetails/taskdetails.component';
 
 const DetailsPage = () => {
-  return(
-  <div className="detailspage">
-   <TaskDetails/>
+  return (
+    <div className="detailspage">
+      <TaskDetails />
     </div>
   );
 };

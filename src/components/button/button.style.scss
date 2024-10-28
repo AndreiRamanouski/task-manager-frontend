@@ -1,24 +1,24 @@
-.btn{
-    min-width: 6vw;
-    max-width: 20vw;
-    width: auto;
-    height: 8vh;
-    letter-spacing: 0.5px;
-    padding:  0 35px 0 35px;
-    font-size: 15px;
-    color:white;
-    text-transform: uppercase;
-    font-family: cursive;
-    font-weight: bolder;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px; 
+.btn {
+  min-width: 6vw;
+  max-width: 20vw;
+  width: auto;
+  height: 8vh;
+  letter-spacing: 0.5px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+  font-family: cursive;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 
-    &:hover{
-        color: rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(0, 0, 0, 0.5);
-    }
+  &:hover {
+    color: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+  }
 }

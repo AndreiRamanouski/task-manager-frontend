@@ -1,52 +1,49 @@
 $sub-color: rgb(22, 209, 209);
 $main-color: grey;
 
-.sign-up{
-max-width: 40vw;
-display: flex;
-flex-direction: column;
-margin: 5vh 5vw;
-border: none;
+.sign-up {
+  max-width: 40vw;
+  display: flex;
+  flex-direction: column;
+  margin: 5vh 5vw;
+  border: none;
 
-.title{
+  .title {
     margin: 2vh 0;
-}
+  }
 
-
-.group{
-position: relative;
-border: none;
-width: 35vw;
-
-
-.form-input {
-    background-color: white;
-    color : black;
-    font-size: 18px;
-    padding: 1vh 1vw 1vh 1vw;
-    display: block;
-    width:  100%;
+  .group {
+    position: relative;
     border: none;
-    border-bottom: 1px solid $sub-color;
-    margin: 1vh 0;
+    width: 35vw;
 
-    &:focus {
-        outline:none;
+    .form-input {
+      background-color: white;
+      color: black;
+      font-size: 18px;
+      padding: 1vh 1vw 1vh 1vw;
+      display: block;
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid $sub-color;
+      margin: 1vh 0;
+
+      &:focus {
+        outline: none;
+      }
     }
 
-}
-
-.form-input-label{
-    color: $sub-color;
-    font-size: 16px;
-    font-weight: normal;
-    position: absolute;
-    left: 1vw;
-    top: -0.5vh;
-    transition: 500ms ease all;
-}
-}
-Button{
+    .form-input-label {
+      color: $sub-color;
+      font-size: 16px;
+      font-weight: normal;
+      position: absolute;
+      left: 1vw;
+      top: -0.5vh;
+      transition: 500ms ease all;
+    }
+  }
+  Button {
     margin-left: 12vw;
-}
+  }
 }

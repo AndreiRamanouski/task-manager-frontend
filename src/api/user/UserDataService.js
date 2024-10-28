@@ -1,41 +1,40 @@
-import axios from "axios";
+import axios from 'axios';
 
 class UserDataService {
-
   createUserAndOrganization(userAndOrganization) {
     return axios.post(
-      "http://localhost:8080/organizations",
-      userAndOrganization
+      'http://localhost:8080/organizations',
+      userAndOrganization,
     );
   }
 
   async signIn(userLoginRequestModel) {
-    return axios.post("http:///localhost:8080/login", userLoginRequestModel);
+    return axios.post('http:///localhost:8080/login', userLoginRequestModel);
   }
 
   async getUserInfo() {
-    return axios.get("http:///localhost:8080/users/info");
+    return axios.get('http:///localhost:8080/users/info');
   }
 
   registerSuccessfulLogin(username, token) {
-    sessionStorage.setItem("authenticatedUser", username);
-    sessionStorage.setItem("token", token);
+    sessionStorage.setItem('authenticatedUser', username);
+    sessionStorage.setItem('token', token);
     this.setupAxiosInterceptors(token);
   }
 
-  registerUserIDAndOrganizationID(userID,organizationID) {
-    console.log("you logged in");
-    sessionStorage.setItem("userID", userID);
-    sessionStorage.setItem("organizationID", organizationID);
+  registerUserIDAndOrganizationID(userID, organizationID) {
+    console.log('you logged in');
+    sessionStorage.setItem('userID', userID);
+    sessionStorage.setItem('organizationID', organizationID);
   }
 
   logout() {
-    sessionStorage.removeItem("authenticatedUser");
-    sessionStorage.removeItem("token");
+    sessionStorage.removeItem('authenticatedUser');
+    sessionStorage.removeItem('token');
   }
 
   isUserLoggedIn() {
-    let user = sessionStorage.getItem("authenticatedUser");
+    let user = sessionStorage.getItem('authenticatedUser');
     if (user === null) return false;
     return true;
   }

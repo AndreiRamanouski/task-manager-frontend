@@ -1,25 +1,25 @@
-import React from "react";
-import { Formik, Field, Form, ErrorMessage } from "formik";
-import Button from "../button/button.component";
-import "./signup.style.scss";
+import React from 'react';
+import { Formik, Field, Form, ErrorMessage } from 'formik';
+import Button from '../button/button.component';
+import './signup.style.scss';
 
-import UserDataService from "../../api/user/UserDataService";
+import UserDataService from '../../api/user/UserDataService';
 
 class SignUp extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       successfulRegistration: false,
-      userName: "",
-      lastName: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      organizationName: "",
-      phoneNumber: "",
-      defaultPassword: "",
-      countryName: "",
-      streetName: "",
+      userName: '',
+      lastName: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      organizationName: '',
+      phoneNumber: '',
+      defaultPassword: '',
+      countryName: '',
+      streetName: '',
     };
   }
 
@@ -71,14 +71,14 @@ class SignUp extends React.Component {
   validate = (values) => {
     let errors = {};
     if (values.password !== values.confirmPassword) {
-      errors.password = "Passwords should match";
-      values.password = "";
-      values.confirmPassword = "";
+      errors.password = 'Passwords should match';
+      values.password = '';
+      values.confirmPassword = '';
     }
     if (values.password < 6) {
-      errors.password = "Password should be longer than 6 letters";
-      values.password = "";
-      values.confirmPassword = "";
+      errors.password = 'Password should be longer than 6 letters';
+      values.password = '';
+      values.confirmPassword = '';
     }
     return errors;
   };
@@ -155,7 +155,7 @@ class SignUp extends React.Component {
                   required
                 />
                 <label className="form-input-label">
-                  Enter the name of your organization:{" "}
+                  Enter the name of your organization:{' '}
                 </label>
               </fieldset>
               <fieldset className="group">
@@ -166,7 +166,7 @@ class SignUp extends React.Component {
                   required
                 />
                 <label className="form-input-label">
-                  Organization's phone number:{" "}
+                  Organization's phone number:{' '}
                 </label>
               </fieldset>
               <fieldset className="group">
@@ -177,7 +177,7 @@ class SignUp extends React.Component {
                   required
                 />
                 <label className="form-input-label">
-                  Organization's County:{" "}
+                  Organization's County:{' '}
                 </label>
               </fieldset>
               <fieldset className="group">
@@ -188,7 +188,7 @@ class SignUp extends React.Component {
                   required
                 />
                 <label className="form-input-label">
-                  Organization's Street name:{" "}
+                  Organization's Street name:{' '}
                 </label>
               </fieldset>
               <fieldset className="group">
@@ -199,11 +199,11 @@ class SignUp extends React.Component {
                   required
                 />
                 <label className="form-input-label">
-                  Default password for any new user in your organization:{" "}
+                  Default password for any new user in your organization:{' '}
                 </label>
               </fieldset>
               <ErrorMessage
-                style={{ color: "red" }}
+                style={{ color: 'red' }}
                 name="password"
                 component="div"
                 className="title"
@@ -216,7 +216,7 @@ class SignUp extends React.Component {
                   required
                 />
                 <label className="form-input-label">
-                  Enter your password:{" "}
+                  Enter your password:{' '}
                 </label>
               </fieldset>
               <fieldset className="group">
@@ -227,7 +227,7 @@ class SignUp extends React.Component {
                   required
                 />
                 <label className="form-input-label">
-                  Confirm the password:{" "}
+                  Confirm the password:{' '}
                 </label>
               </fieldset>
 

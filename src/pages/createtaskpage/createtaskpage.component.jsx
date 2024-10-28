@@ -1,12 +1,12 @@
-import "./createtaskpage.style.scss";
-import CreateTask from "../../components/createtask/createtask.component";
+import './createtaskpage.style.scss';
+import CreateTask from '../../components/createtask/createtask.component';
 
 const CreateTaskPage = () => {
   return (
     <div className="createtaskpage">
-    <CreateTask/>
+      <CreateTask />
     </div>
-  )
+  );
 };
 
 export default CreateTaskPage;

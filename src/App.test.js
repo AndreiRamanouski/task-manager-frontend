@@ -1,8 +1,18 @@
 import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App Component', () => {
+  test('renders footer with copyright text', () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>,
+    );
+
+    const footerText = screen.getByText(
+      /© 2022 Task Manager. All Rights Reserved/i,
+    );
+    expect(footerText).toBeInTheDocument();
+  });
 });

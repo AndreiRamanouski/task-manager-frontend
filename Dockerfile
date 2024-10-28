@@ -16,9 +16,10 @@
 #you do not need to do anything. just docker build .
 #downloads a lot of dependencies and takes almost 20 minutes to create an image, though.
 
-FROM node as frontend-build
+FROM node:18 as frontend-build
 WORKDIR /task-manager-frontend
 
+# Install dependencies
 COPY package.json package-lock.json ./
 RUN npm install
 
