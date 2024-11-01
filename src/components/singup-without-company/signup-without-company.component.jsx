@@ -36,7 +36,7 @@ class SignUpWithoutCompany extends React.Component {
   };
 
   validate = (values) => {
-    console.log(values)
+    console.log(values);
   };
 
   render() {
