@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AssignedUsers = ({ userName, userId, email, lastName }) => {
+const AssignedUsers = ({ userName, email, lastName }) => {
   return (
     <div>
       <h3>

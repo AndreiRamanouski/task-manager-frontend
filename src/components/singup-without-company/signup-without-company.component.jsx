@@ -1,9 +1,7 @@
 import React from 'react';
-import { Formik, Field, Form, ErrorMessage } from 'formik';
+import { Formik, Field, Form } from 'formik';
 import Button from '../button/button.component';
 import './signup-without-company.style.scss';
-
-import UserDataService from '../../api/user/UserDataService';
 
 class SignUpWithoutCompany extends React.Component {
   constructor(props) {
@@ -38,7 +36,7 @@ class SignUpWithoutCompany extends React.Component {
   };
 
   validate = (values) => {
-    let errors = {};
+    console.log(values)
   };
 
   render() {
