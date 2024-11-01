@@ -15,7 +15,7 @@
       "presets": ["@babel/preset-react"]
     },
     "ecmaFeatures": {
-      "jsx": true // Enable JSX
+      "jsx": true
     },
     "ecmaVersion": 12,
     "sourceType": "module",
@@ -24,7 +24,10 @@
   "plugins": ["react", "prettier"],
   "rules": {
     "prettier/prettier": "error",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": "off",
+    "no-unused-vars": "warn",
+    "react/no-unescaped-entities": "off"
   },
   "settings": {
     "react": {
