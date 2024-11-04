@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './introduction.style.scss';
 
-const Introduction = ({ imagesrc, text, actionUri, match }) => {
+const Introduction = ({ imagesrc, text, actionUri }) => {
   const navigate = useNavigate();
   return (
     <div className="item" onClick={() => navigate(`${actionUri}`)}>
